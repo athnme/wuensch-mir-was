@@ -1,18 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+*,*::before,*::after{
+  box-sizing:border-box
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
   body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+    font-family: 'Roboto', sans-serif;
   }
 `;
 
