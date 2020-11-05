@@ -1,16 +1,23 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Button from './components/Button';
-import WishListItem from './components/WishListItem';
+import TopBar from './components/TopBar';
 import GlobalStyle from './GlobalStyle';
+import Add from './pages/Add';
+import Home from './pages/Home';
+import WishList from './pages/WishList';
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
       <Switch>
+        <Route path="/add">
+          <Add />
+        </Route>
+        <Route path="/:name">
+          <WishList />
+        </Route>
         <Route path="/">
-          <WishListItem title="List Item" />
-          <Button>+</Button>
+          <Home />
         </Route>
       </Switch>
     </Router>
